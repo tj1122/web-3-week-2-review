@@ -1,28 +1,33 @@
 /* =============
     Base
 ============= */
-figure{
-    padding: 0;
-    margin: 0;
+
+figure {
+  padding: 0;
+  margin: 0;
 }
 
-ul{
-    padding: 0;
-    margin: 0;
-    li{
-        list-style: none;
-    }
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-.section-content{
-    padding: 0px 0px;
-
-    @include md{
-        padding: 50px 0;
-    }
-
-    @include sm{
-        padding: 0px 50px;
-    }
+.section-content {
+  padding: 0;
+  @include md {
+    padding: 50px 0;
+  }
+  @include sm {
+    padding: 0 50px;
+  }
 }

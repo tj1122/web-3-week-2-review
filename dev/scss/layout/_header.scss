@@ -1,25 +1,25 @@
 /* =============
     Header
 ============= */
+header {
+  background-color: black;
+  height: 85px;
+  padding: 0 36px;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
-header{
+  nav {
+    justify-self: flex-end;
 
-    background-color: black;height: 85px;
-    padding: 0px 36px;
-    align-content: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    nav{
-      justify-self: flex-end;
-      img{
-        padding-left: 32px;
-      }
+    img {
+      padding-left: 32px;
     }
-    @include md{
-        padding: 0px 80px;
-    }
-    @include xl{
-        padding: 0px 144px;
-    }
-
+  }
+  @include md {
+    padding: 0 80px;
+  }
+  @include xl {
+    padding: 0 144px;
+  }
 }
