@@ -1,19 +1,20 @@
 /* =============
     Prices
 ============= */
+
 #prices {
   background-image: url("../img/prices/prices_bg.jpg");
   background-size: cover;
   background-position: center bottom;
   height: 100vh;
-  padding: 30px 36px 0;
+  padding: 30px 36px;
   @include xl {
     height: 100vh;
-    padding: 40px 144px 0;
+    padding: 40px 144px;
   }
 
   p {
-    padding-bottom: 30px;
+    padding-bottom: 80px;
     font-weight: 200;
     text-align: center;
   }
@@ -25,7 +26,7 @@
   section {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-gap: 30px;
     @include md {
       display: grid;
@@ -34,12 +35,33 @@
       grid-gap: 100px;
     };
 
+    div:nth-child(1){
+      display: none;
+      @include xl{
+        display: unset;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    div:nth-child(3){
+      display: none;
+      @include xl{
+        display: unset;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     div {
-      border: 1px Tranparent solid;
+      border: 0;
       background-color: $white;
       height: 461px;
+      width: 350px;
       border-radius: 12px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      display: flex;
+      flex-direction: column;
 
       h2 {
         background-color: #E4E4E4;
@@ -55,7 +77,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 10px 0 10px 0;
+        padding: 10px 0;
       }
 
       p {
@@ -63,16 +85,18 @@
         font-weight: 200;
       }
 
-      h3{
+      h3 {
         padding: 0 50px 10px 50px;
       }
 
-      ul{
-        padding: 0 50px 0 50px;
-        img{
+      ul {
+        padding: 0 50px 30px 50px;
+
+        img {
           padding-right: 5px;
         }
-        li{
+
+        li {
           padding: 0 0 5px 0;
           display: flex;
           flex-direction: row;
@@ -80,6 +104,26 @@
           align-content: flex-start;
         }
       }
+
+      button {
+        border: 1px Transparent solid;
+        background-color: Transparent;
+        text-decoration: none;
+        a {
+          border: 1px Transparent solid;
+          padding: 14px 12px;
+          color: $white;
+          background-color: $xfintiyblue;
+          text-decoration: none;
+          border-radius: 24px;
+        }
+      }
     }
+  }
+
+  h5 {
+    padding-top: 10px;
+    text-align: center;
+    color:$white;
   }
 }

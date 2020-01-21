@@ -31,18 +31,21 @@
     grid-column-gap: 0;
     grid-row-gap: 0;
   };
-  img:nth-child(1){
+  img:first-child{
     display: none;
     @include xl {
       display: unset;
     }
   };
-  img:nth-child(3){
+  img:nth-last-child(-n + 1){
     display: none;
     @include xl {
       display: unset;
     }
   };
+  p{
+    font-weight: 300;
+  }
 
   div {
     grid-area: text;
@@ -72,6 +75,9 @@
         grid-column-gap: 0;
         grid-row-gap: 0;
       }
+    }
+    p:nth-child(4){
+      padding-top: 40px;
     }
   };
 }
