@@ -1,0 +1,85 @@
+/* =============
+    Prices
+============= */
+#prices {
+  background-image: url("../img/prices/prices_bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+  padding: 30px 36px 0;
+  @include xl {
+    height: 100vh;
+    padding: 40px 144px 0;
+  }
+
+  p {
+    padding-bottom: 30px;
+    font-weight: 200;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 30px;
+    @include md {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      grid-gap: 100px;
+    };
+
+    div {
+      border: 1px Tranparent solid;
+      background-color: $white;
+      height: 461px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      h2 {
+        background-color: #E4E4E4;
+        padding: 15px 0;
+        border-radius: 12px 12px 0 0;
+        font-size: rem-calc(16);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: rem-calc(100);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0 10px 0;
+      }
+
+      p {
+        font-size: rem-calc(12);
+        font-weight: 200;
+      }
+
+      h3{
+        padding: 0 50px 10px 50px;
+      }
+
+      ul{
+        padding: 0 50px 0 50px;
+        img{
+          padding-right: 5px;
+        }
+        li{
+          padding: 0 0 5px 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-content: flex-start;
+        }
+      }
+    }
+  }
+}
